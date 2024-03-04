@@ -11,7 +11,7 @@ jpype.startJVM(jpype.getDefaultJVMPath(), '-Djava.awt.headless=false')
 
 
 import os
-os.environ['JAVA_HOME'] = jpype.getDefaultJVMPath()
+os.environ['JAVA_HOME'] = '/home/appuser/.jre/jdk-17.0.10+7-jre'
 os.environ['PATH'] = f"{os.environ.get('PATH')}:{os.environ.get('JAVA_HOME')}/bin"
 
 import py5
