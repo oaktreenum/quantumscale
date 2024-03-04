@@ -4,7 +4,6 @@ CODE IS LICENSED UNDER CC BY-NC-ND
 '''
 import py5
 import numpy as np
-import math
 
 
 
