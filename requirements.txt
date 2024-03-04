@@ -1,4 +1,3 @@
 py5
 numpy
-default-jdk
-JPype1
+default-jre
