@@ -9,6 +9,11 @@ jdk.install('17', jre=True)
 import jpype
 jpype.startJVM(jpype.getDefaultJVMPath(), '-Djava.awt.headless=false')
 
+
+import os
+os.environ['JAVA_HOME'] = '/root/.jdk/17'
+os.environ['PATH'] = f"{os.environ.get('PATH')}:{os.environ.get('JAVA_HOME')}/bin"
+
 import py5
 import numpy as np
 
