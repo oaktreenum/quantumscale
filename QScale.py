@@ -4,15 +4,18 @@ CODE IS LICENSED UNDER CC BY-NC-ND
 '''
 
 import jdk
+import jpype
+import os
+
+
 jdk.install('17', jre=True)
 
-import jpype
-jpype.startJVM(jpype.getDefaultJVMPath(), '-Djava.awt.headless=false')
-
-
-import os
-os.environ['JAVA_HOME'] = '/home/appuser/.jre/jdk-17.0.10+7-jre'
+java_home = "/home/appuser/.jre/jdk-17.0.10+7-jre"
+os.environ['JAVA_HOME'] = java_home
 os.environ['PATH'] = f"{os.environ.get('PATH')}:{os.environ.get('JAVA_HOME')}/bin"
+
+jvm_shared_library_path = os.path.join(java_home, "lib", "server", "libjvm.so")
+jpype.startJVM(jvm_shared_library_path, "-Djava.awt.headless=false")
 
 import py5
 import numpy as np
