@@ -15,8 +15,30 @@ os.environ['JAVA_HOME'] = java_home
 os.environ['PATH'] = f"{os.environ.get('PATH')}:{os.environ.get('JAVA_HOME')}/bin"
 
 jvm_shared_library_path = os.path.join(java_home, "lib", "server", "libjvm.so")
-jpype.shutdownJVM()
 jpype.startJVM(jvm_shared_library_path, "-Djava.awt.headless=false")
+
+# Function to start JVM
+def start_jvm():
+    jpype.startJVM(jpype.getDefaultJVMPath(), '-Djava.awt.headless=false')
+
+# Function to shutdown JVM
+def shutdown_jvm():
+    jpype.shutdownJVM()
+
+# Main Streamlit application code
+def main():
+    # Start JVM when the application starts
+    shutdown_jvm()
+
+    # Your Streamlit application code goes here
+    st.title("My Streamlit Application")
+    st.write("Hello, world!")
+
+    # Call shutdown_jvm() when the application stops
+    start_jvm()
+
+if __name__ == "__main__":
+    main()
 
 import py5.core
 from py5.core import Py5ColorHelper
