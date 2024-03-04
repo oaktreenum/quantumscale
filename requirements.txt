@@ -1,4 +1,4 @@
 py5
 numpy
-default-jre-headless
+install-jdk
 JPype1
