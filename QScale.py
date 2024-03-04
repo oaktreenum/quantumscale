@@ -17,7 +17,7 @@ os.environ['PATH'] = f"{os.environ.get('PATH')}:{os.environ.get('JAVA_HOME')}/bi
 jvm_shared_library_path = os.path.join(java_home, "lib", "server", "libjvm.so")
 jpype.startJVM(jvm_shared_library_path, "-Djava.awt.headless=false")
 
-from py5.core import Py5ColorHelper
+import py5.core
 import py5
 import numpy as np
 
