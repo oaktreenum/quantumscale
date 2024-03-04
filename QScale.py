@@ -8,9 +8,9 @@ import jpype
 import os
 
 
-jdk.install('17', jre=True)
+jdk.install('17')
 
-java_home = "/home/appuser/.jre/jdk-17.0.10+7-jre"
+java_home = "/home/appuser/.jdk/jdk-17.0.10+7"
 os.environ['JAVA_HOME'] = java_home
 os.environ['PATH'] = f"{os.environ.get('PATH')}:{os.environ.get('JAVA_HOME')}/bin"
 
