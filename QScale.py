@@ -6,9 +6,6 @@ CODE IS LICENSED UNDER CC BY-NC-ND
 import jdk
 jdk.install('17', jre=True)
 
-import os
-os.environ["JAVA_OPTS"] = "-Djava.awt.headless=false"
-
 import py5
 import numpy as np
 
