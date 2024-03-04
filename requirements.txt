@@ -1,3 +1,3 @@
 py5
 numpy
-default-jre
+install-jdk
