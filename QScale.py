@@ -2,11 +2,14 @@
 '''
 CODE IS LICENSED UNDER CC BY-NC-ND
 '''
-import py5
-import numpy as np
+
 import jdk
 
 jdk.install('17')
+
+import py5
+import numpy as np
+
 
 sphere_radius = 260
 rectangles_count = 169
