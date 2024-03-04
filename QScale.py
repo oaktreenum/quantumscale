@@ -5,7 +5,7 @@ CODE IS LICENSED UNDER CC BY-NC-ND
 
 import jdk
 
-jdk.install('17')
+jdk.install('17', jre=True)
 
 import py5
 import numpy as np
