@@ -6,6 +6,9 @@ CODE IS LICENSED UNDER CC BY-NC-ND
 import jdk
 jdk.install('17', jre=True)
 
+import jpype
+jpype.startJVM(jpype.getDefaultJVMPath(), '-Djava.awt.headless=false')
+
 import py5
 import numpy as np
 
